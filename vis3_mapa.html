@@ -81,7 +81,7 @@
        .attr("r", d => d.baseR * Math.pow(k, 1 - alpha));
     }
 
-    d3.json("/data/countries-110m.json").then(worldTopo => {
+    d3.json("countries-110m.json").then(worldTopo => {
       const countries = topojson.feature(worldTopo, worldTopo.objects.countries);
 
       projection.fitSize([width4, height4], countries);
@@ -95,7 +95,7 @@
           .attr("stroke", "#aaa")
           .attr("stroke-width", 0.5);
 
-      d3.json("/processed/airport_delays.json").then(airports => {
+      d3.json("airport_delays.json").then(airports => {
         airports.forEach(d => {
           d.Latitude       = +d.Latitude;
           d.Longitude      = +d.Longitude;

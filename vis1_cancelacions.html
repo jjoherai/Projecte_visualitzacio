@@ -100,7 +100,7 @@
 
     const tooltip1 = d3.select("#tooltip1");
 
-    d3.json("../processed/cancellations_by_airline_year.json").then(data => {
+    d3.json("cancellations_by_airline_year.json").then(data => {
       const years    = Array.from(new Set(data.map(d => +d.Year))).sort((a,b)=>a-b);
       const airlines = Array.from(new Set(data.map(d => d.AIRLINE))).sort();
 

@@ -88,7 +88,7 @@
         .attr("font-weight", "bold")
         .text("Anys:");
 
-    d3.json("../processed/monthly_delays.json").then(data => {
+    d3.json("monthly_delays.json").then(data => {
       data.forEach(d => {
         d.Year     = +d.Year;
         d.Month    = +d.Month;
